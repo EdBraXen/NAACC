@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAA Conversation Club - Where Conversation Meets Confidence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#1e3a8a',
+                        'secondary': '#3b82f6',
+                        'accent': '#60a5fa',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="font-poppins text-gray-800 bg-white">
+    <!-- Header -->
+    <header class="bg-gradient-to-br from-primary to-secondary text-white py-4 md:py-8 shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-5 header-flex flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <a href="index.html">
+                    <img src="NAACC.JPEG" alt="NAACC logo"
+                        class="logo-img w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-white/20" />
+                </a>
+                <div>
+                    <h1 class="text-xl md:text-3xl font-bold mb-1 tracking-tight">NAACC</h1>
+                    <p class="hidden md:block text-sm font-light opacity-95">Conversation Club</p>
+                </div>
+            </div>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-6">
+                <a href="activities.html" class="font-medium hover:text-blue-100 transition-colors">Activities</a>
+                <a href="#schedule" class="font-medium hover:text-blue-100 transition-colors">Schedule</a>
+                <a href="#register" class="font-medium hover:text-blue-100 transition-colors">Register</a>
+                <a href="https://www.instagram.com/naaconversationclub/" target="_blank" rel="noopener"
+                    class="px-4 py-2 bg-white bg-opacity-10 text-white rounded-lg hover:bg-white hover:text-primary transition-colors duration-200 text-sm">Follow
+                    on Instagram</a>
+            </nav>
+
+            <!-- Mobile Burger -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-primary/95 backdrop-blur-md absolute top-full left-0 w-full shadow-xl border-t border-white/10">
+            <div class="flex flex-col p-5 space-y-4 text-center">
+                <a href="activities.html" class="text-lg font-medium hover:text-accent">Activities</a>
+                <a href="#schedule" class="text-lg font-medium hover:text-accent">Schedule</a>
+                <a href="#register" class="text-lg font-medium hover:text-accent">Register</a>
+                <a href="https://www.instagram.com/naaconversationclub/" target="_blank"
+                    class="px-4 py-2 bg-white text-primary rounded-lg font-semibold hover:bg-gray-100 inline-block w-full">Instagram</a>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- Hero Section -->
+    <section id="about" class="py-16">
+        <div class="max-w-6xl mx-auto px-5">
+            <h2 class="text-3xl md:text-4xl font-semibold text-primary mb-8 text-center relative pb-4">
+                Welcome to the Conversation Club
+                <span
+                    class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-secondary to-accent rounded"></span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div
+                    class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <p class="text-lg font-medium text-primary mb-4">
+                        Welcome to the Conversation Club of the National Aviation Academy! Our club is designed to
+                        develop students' English language skills and provide them with the opportunity to express
+                        themselves freely.
+                    </p>
+                    <p class="text-gray-800 leading-relaxed mb-4">
+                        That is what National Aviation Academy Conversation Club is all about. NAACC offers a friendly
+                        and stress-free environment where students of the National Aviation Academy can practice English
+                        through real conversations, role plays, and interactive activities. It helps students speak
+                        confidently, learn from mistakes, and improve their fluency while having fun and gaining
+                        real-life communication skills.
+                    </p>
+                </div>
+                <div
+                    class="p-6 bg-white rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-l-4 border-secondary">
+                    <p class="text-lg font-medium text-primary mb-4">
+                        Milli Aviasiya Akademiyasının "Conversation Club"una xoş gəlmisiniz! Bizim klub tələbələrin
+                        ingilis dili bacarıqlarını inkişaf etdirmək, onlara özlərini sərbəst ifadə etmək imkanı yaratmaq
+                        üçün nəzərdə tutulub.
+                    </p>
+                    <p class="text-gray-800 leading-relaxed mb-6">
+                        Danışıq real ünsiyyətin ürəyidir. Bu, insanların fikirlərini paylaşmaq, suallar vermək və
+                        gündəlik həyat vəziyyətlərində özünü ifadə etmək üsuludur. Danışıq vasitəsilə insanlar
+                        dinləməyi, təbii şəkildə cavab verməyi və inamla ünsiyyət qurmağı öyrənirlər. İngilis dilinizi
+                        yaxşılaşdırmağın ən yaxşı yolu qaydaları əzbərləmək deyil, danışığı müntəzəm məşq etmək və dili
+                        real vəziyyətlərdə istifadə etməkdir.
+                    </p>
+                    <a href="activities.html"
+                        class="inline-block w-full text-center px-6 py-3 bg-secondary text-white rounded-lg font-semibold hover:bg-primary transition-colors shadow-md">
+                        <i class="fas fa-calendar-alt mr-2"></i> View Upcoming Activities
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-5">
+            <h2 class="text-3xl md:text-4xl font-semibold text-primary mb-8 text-center relative pb-4">
+                The Advantages Our Club Offers You
+                <span
+                    class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-secondary to-accent rounded"></span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div
+                    class="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <p class="text-gray-800 leading-relaxed mb-4">
+                        Our mission is to break the language barrier among students and make the learning process fun
+                        through discussions on interesting topics. We focus on both everyday English and professional
+                        terminology.
+                    </p>
+                    <p class="text-gray-800 leading-relaxed">
+                        Conversation is the heart of real communication. It is how people share ideas, ask questions,
+                        and express themselves in real-life situations. Through conversation, people learn to listen,
+                        respond naturally, and communicate with confidence. The best way to improve your English is not
+                        by memorizing rules, but by practicing conversation regularly and using the language in real
+                        contexts.
+                    </p>
+                </div>
+                <div
+                    class="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-l-4 border-secondary">
+                    <p class="text-gray-800 leading-relaxed mb-4">
+                        Məqsədimiz tələbələr arasında dil baryerini aradan qaldırmaq və maraqlı mövzular ətrafında
+                        müzakirələr apararaq öyrənmə prosesini əyləncəli hala gətirməkdir. Biz həm gündəlik, həm də
+                        peşəkar ingilis dilinə diqqət yetiririk.
+                    </p>
+                    <p class="text-gray-800 leading-relaxed">
+                        Bu, Milli Aviasiya Akademiyasının Danışıq Klubunun əsas məqsədidir. NAACC tələbələrə dostcanlı
+                        və stresssiz bir mühit təqdim edir, burada Milli Aviasiya Akademiyasının tələbələri ingilis
+                        dilini real danışıq, rol oyunları və interaktiv fəaliyyətlər vasitəsilə məşq edə bilirlər. Bu
+                        klub tələbələrə inamla danışmağı, səhvlərdən öyrənməyi və axıcılığını artırmağı öyrədir,
+                        həmçinin əylənərək real həyat ünsiyyət bacarıqları qazanmağa kömək edir.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-gradient-to-br from-primary to-secondary text-white">
+        <div class="max-w-6xl mx-auto px-5">
+            <h2 class="text-3xl md:text-4xl font-semibold text-white mb-8 text-center relative pb-4">
+                What Will You Gain by Joining Us?
+                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-white rounded"></span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div
+                    class="p-6 bg-white bg-opacity-10 backdrop-blur-md border border-white border-opacity-20 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                    <p class="text-white leading-relaxed">
+                        By joining our club, you will make new friends, enhance your public speaking skills, and improve
+                        the language proficiency essential for your future career. New and diverse topics await you
+                        every week!
+                    </p>
+                </div>
+                <div
+                    class="p-6 bg-white bg-opacity-10 backdrop-blur-md border border-white border-opacity-20 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-l-4 border-white">
+                    <p class="text-white leading-relaxed">
+                        Klubumuza qoşularaq siz yeni dostlar qazanacaq, topluluq qarşısında çıxış etmək qabiliyyətinizi
+                        artıracaq və gələcək karyeranız üçün vacib olan dil biliklərinizi təkminləşdirəcəksiniz. Hər
+                        həftə yeni və fərqli mövzular sizi gözləyir!
+                    </p>
+                </div>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div
+                    class="bg-white bg-opacity-15 backdrop-blur-md border border-white border-opacity-20 rounded-2xl p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                    <div
+                        class="w-20 h-20 mx-auto mb-6 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-3xl text-white">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-4">New Friends</h3>
+                    <p class="text-white text-opacity-90 text-sm mb-2">Connect with like-minded students</p>
+                    <p class="text-white text-opacity-75 text-xs">Oxşar düşüncəli tələbələrlə tanış olun</p>
+                </div>
+                <div
+                    class="bg-white bg-opacity-15 backdrop-blur-md border border-white border-opacity-20 rounded-2xl p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                    <div
+                        class="w-20 h-20 mx-auto mb-6 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-3xl text-white">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-4">Public Speaking</h3>
+                    <p class="text-white text-opacity-90 text-sm mb-2">Build confidence in speaking</p>
+                    <p class="text-white text-opacity-75 text-xs">Danışıqda özünəinamı artırın</p>
+                </div>
+                <div
+                    class="bg-white bg-opacity-15 backdrop-blur-md border border-white border-opacity-20 rounded-2xl p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                    <div
+                        class="w-20 h-20 mx-auto mb-6 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-3xl text-white">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-4">Language Skills</h3>
+                    <p class="text-white text-opacity-90 text-sm mb-2">Improve English proficiency</p>
+                    <p class="text-white text-opacity-75 text-xs">İngilis dili biliklərinizi təkmilləşdirin</p>
+                </div>
+                <div
+                    class="bg-white bg-opacity-15 backdrop-blur-md border border-white border-opacity-20 rounded-2xl p-8 text-center hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                    <div
+                        class="w-20 h-20 mx-auto mb-6 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-3xl text-white">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-4">Career Ready</h3>
+                    <p class="text-white text-opacity-90 text-sm mb-2">Essential skills for your future</p>
+                    <p class="text-white text-opacity-75 text-xs">Gələcəyiniz üçün vacib bacarıqlar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-5">
+            <h2 class="text-3xl md:text-4xl font-semibold text-primary mb-8 text-center relative pb-4">
+                Our Activities
+                <span
+                    class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-secondary to-accent rounded"></span>
+            </h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center">
+                    <div
+                        class="w-18 h-18 mx-auto mb-6 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center text-3xl text-white">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-4">Group Discussions</h3>
+                    <p class="text-gray-800 text-sm mb-2">Engage in meaningful conversations on various topics</p>
+                    <p class="text-gray-500 text-xs">Müxtəlif mövzular üzrə mənalı söhbətlər aparın</p>
+                </div>
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center">
+                    <div
+                        class="w-18 h-18 mx-auto mb-6 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center text-3xl text-white">
+                        <i class="fas fa-theater-masks"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-4">Role Plays</h3>
+                    <p class="text-gray-800 text-sm mb-2">Practice real-life scenarios through interactive role-playing
+                    </p>
+                    <p class="text-gray-500 text-xs">İnteraktiv rol oyunları vasitəsilə real həyat vəziyyətlərini məşq
+                        edin</p>
+                </div>
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center">
+                    <div
+                        class="w-18 h-18 mx-auto mb-6 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center text-3xl text-white">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-4">Interactive Games</h3>
+                    <p class="text-gray-800 text-sm mb-2">Learn through fun and engaging language games</p>
+                    <p class="text-gray-500 text-xs">Əyləncəli və maraqlı dil oyunları vasitəsilə öyrənin</p>
+                </div>
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center">
+                    <div
+                        class="w-18 h-18 mx-auto mb-6 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center text-3xl text-white">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-4">Aviation English</h3>
+                    <p class="text-gray-800 text-sm mb-2">Learn professional aviation terminology</p>
+                    <p class="text-gray-500 text-xs">Peşəkar aviasiya terminologiyasını öyrənin</p>
+                </div>
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center">
+                    <div
+                        class="w-18 h-18 mx-auto mb-6 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center text-3xl text-white">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-4">Reading Sessions</h3>
+                    <p class="text-gray-800 text-sm mb-2">Improve comprehension through reading exercises</p>
+                    <p class="text-gray-500 text-xs">Oxu məşqləri vasitəsilə anlama qabiliyyətini artırın</p>
+                </div>
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center">
+                    <div
+                        class="w-18 h-18 mx-auto mb-6 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center text-3xl text-white">
+                        <i class="fas fa-presentation"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-4">Presentations</h3>
+                    <p class="text-gray-800 text-sm mb-2">Develop presentation and public speaking skills</p>
+                    <p class="text-gray-500 text-xs">Təqdimat və ictimai çıxış bacarıqlarını inkişaf etdirin</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-5">
+            <h2 class="text-3xl md:text-4xl font-semibold text-primary mb-8 text-center relative pb-4">
+                Meeting Schedule
+                <span
+                    class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-secondary to-accent rounded"></span>
+            </h2>
+            <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                    class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 text-center border-2 border-accent hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+                    <div
+                        class="w-18 h-18 mx-auto mb-6 bg-primary rounded-full flex items-center justify-center text-3xl text-white">
+                        <i class="fas fa-calendar-week"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-4">Weekly Meetings</h3>
+                    <p class="text-gray-800 text-sm mb-2">Join us every week for engaging conversations and activities
+                    </p>
+                    <p class="text-gray-500 text-xs">Hər həftə maraqlı söhbətlər və fəaliyyətlər üçün bizə qoşulun</p>
+                </div>
+                <div
+                    class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 text-center border-2 border-accent hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+                    <div
+                        class="w-18 h-18 mx-auto mb-6 bg-primary rounded-full flex items-center justify-center text-3xl text-white">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-4">Flexible Timing</h3>
+                    <p class="text-gray-800 text-sm mb-2">Meetings scheduled to fit your academic calendar</p>
+                    <p class="text-gray-500 text-xs">Görüşlər akademik təqviminizə uyğun planlaşdırılır</p>
+                </div>
+                <div
+                    class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 text-center border-2 border-accent hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+                    <div
+                        class="w-18 h-18 mx-auto mb-6 bg-primary rounded-full flex items-center justify-center text-3xl text-white">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-4">Location</h3>
+                    <p class="text-gray-800 text-sm mb-2">Meetings held at National Aviation Academy campus</p>
+                    <p class="text-gray-500 text-xs">Görüşlər Milli Aviasiya Akademiyasının kampusunda keçirilir</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="py-16 bg-gray-50 text-center">
+        <div class="max-w-6xl mx-auto px-5">
+            <h2 class="text-3xl md:text-4xl font-semibold text-primary mb-8 text-center relative pb-4">
+                Highlights from our meetings
+                <span
+                    class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-secondary to-accent rounded"></span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div class="p-6 bg-white rounded-xl shadow-md">
+                    <p class="text-gray-800 leading-relaxed">We learn together and spend our time efficiently.</p>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-md border-l-4 border-secondary">
+                    <p class="text-gray-800 leading-relaxed">Görüşlərimizdən maraqlı anlar: Biz birlikdə həm öyrənirik,
+                        həm də vaxtımızı səmərəli keçiririk.</p>
+                </div>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div
+                    class="aspect-square bg-gradient-to-br from-accent to-secondary rounded-xl flex flex-col items-center justify-center text-white shadow-md hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer relative overflow-hidden">
+                    <i class="fas fa-image text-5xl mb-4"></i>
+                    <p
+                        class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4 transform translate-y-full transition-transform duration-300 group-hover:translate-y-0">
+                        Meeting Photo</p>
+                </div>
+                <div
+                    class="aspect-square bg-gradient-to-br from-accent to-secondary rounded-xl flex flex-col items-center justify-center text-white shadow-md hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer relative overflow-hidden">
+                    <i class="fas fa-image text-5xl mb-4"></i>
+                    <p
+                        class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4 transform translate-y-full transition-transform duration-300 group-hover:translate-y-0">
+                        Activity Photo</p>
+                </div>
+                <div
+                    class="aspect-square bg-gradient-to-br from-accent to-secondary rounded-xl flex flex-col items-center justify-center text-white shadow-md hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer relative overflow-hidden">
+                    <i class="fas fa-image text-5xl mb-4"></i>
+                    <p
+                        class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4 transform translate-y-full transition-transform duration-300 group-hover:translate-y-0">
+                        Group Discussion</p>
+                </div>
+                <div
+                    class="aspect-square bg-gradient-to-br from-accent to-secondary rounded-xl flex flex-col items-center justify-center text-white shadow-md hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer relative overflow-hidden">
+                    <i class="fas fa-image text-5xl mb-4"></i>
+                    <p
+                        class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4 transform translate-y-full transition-transform duration-300 group-hover:translate-y-0">
+                        Presentation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-5">
+            <h2 class="text-3xl md:text-4xl font-semibold text-primary mb-8 text-center relative pb-4">
+                Registration & Social Media
+                <span
+                    class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-secondary to-accent rounded"></span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="p-6 bg-white rounded-xl shadow-md">
+                    <p class="text-gray-800 leading-relaxed">
+                        Ready to join us? Scan the QR code below to register and follow us on Instagram to stay updated
+                        with the latest news!
+                    </p>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-md border-l-4 border-secondary">
+                    <p class="text-gray-800 leading-relaxed">
+                        Bizə qoşulmağa hazırsınız? Aşağıdakı QR kodu skan edərək qeydiyyatdan keçin və ən son
+                        yeniliklərdən xəbərdar olmaq üçün bizi Instagram-da izləyin!
+                    </p>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+                <div class="flex-shrink-0">
+                    <div class="w-64 h-64 flex flex-col items-center justify-center">
+                        <img src="application-qr.png" alt="Application QR code"
+                            class="qr-img w-48 h-48 object-contain" />
+                        <p class="text-sm text-gray-500 font-medium mt-3">Scan to register</p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4 min-w-[250px]">
+                    <a href="application-qr.png" target="_blank" rel="noopener"
+                        class="px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-lg font-semibold text-center shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        Registration Now
+                    </a>
+                    <a href="#"
+                        class="px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-lg font-semibold text-center shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        İndi qeydiyyatdan keç
+                    </a>
+                    <a href="https://www.instagram.com/naaconversationclub/" target="_blank" rel="noopener"
+                        class="px-8 py-4 bg-white text-primary border-2 border-primary rounded-lg font-semibold text-center hover:bg-primary hover:text-white transition-all duration-300">
+                        Follow on Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-5">
+            <h2 class="text-3xl md:text-4xl font-semibold text-primary mb-8 text-center relative pb-4">
+                Get in Touch
+                <span
+                    class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-secondary to-accent rounded"></span>
+            </h2>
+            <div class="space-y-6">
+                <div
+                    class="flex items-center gap-6 bg-white p-8 rounded-xl shadow-md hover:translate-x-2 transition-all duration-300">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-2xl text-white flex-shrink-0">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-primary mb-1">Email</h3>
+                        <p class="text-gray-800">naacc@naa.edu.az</p>
+                    </div>
+                </div>
+                <div
+                    class="flex items-center gap-6 bg-white p-8 rounded-xl shadow-md hover:translate-x-2 transition-all duration-300">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-2xl text-white flex-shrink-0">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-primary mb-1">Follow Us</h3>
+                        <p class="text-gray-800">@naa_conversation_club</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">NAA Conversation Club</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Where Conversation Meets Confidence</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#activities"
+                                class="text-gray-400 hover:text-white transition-colors">Activities</a></li>
+                        <li><a href="#schedule" class="text-gray-400 hover:text-white transition-colors">Schedule</a>
+                        </li>
+                        <li><a href="#register" class="text-gray-400 hover:text-white transition-colors">Register</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Connect</h3>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/naaconversationclub/" target="_blank" rel="noopener"
+                            aria-label="Instagram"
+                            class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center text-xl hover:bg-secondary hover:-translate-y-1 transition-all duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="Facebook"
+                            class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center text-xl hover:bg-secondary hover:-translate-y-1 transition-all duration-300">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" aria-label="Email"
+                            class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center text-xl hover:bg-secondary hover:-translate-y-1 transition-all duration-300">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400 text-sm">&copy; 2024 National Aviation Academy Conversation Club. All rights
+                    reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
